@@ -107,7 +107,7 @@ footer {
 @media (max-width: 768px) {
     section.imagem,
     section.imagem2 {
-        background-attachment: scroll;
+        /* background-attachment: scroll;  apague esta linha para manter o fixed no celular */
         background-position: 75% center;
         min-height: 50vh;
     }
