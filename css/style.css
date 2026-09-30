@@ -146,14 +146,12 @@ footer {
 @media (max-width: 768px) {
     section.imagem,
     section.imagem2 {
-        background-position: 75% center;
+        background-position: 75% center;   /* só vale no plano B (imagem estática) */
         min-height: 50vh;
     }
 
-    section.imagem::before,
-    section.imagem2::before {
-        background-position: 75% center;
-    }
+    section.imagem::before  { background-position: 65% center; }
+    section.imagem2::before { background-position: 40% center; }
 }
 
 /* Respeita quem desativou animações no aparelho */
