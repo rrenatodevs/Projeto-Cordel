@@ -9,23 +9,27 @@
     box-sizing: border-box;
 }
 
+/* Aplicando uma fonte importada no site e deixando responsiva de acordo com diferentes telas */
 body {
     font-family: 'Cormorant Garamond', 'Bebas Neue', sans-serif;
     font-size: clamp(1.4rem, 4vw, 1.8rem);
     font-weight: 600;
 }
 
+/* Configurando uma largura mínima */
 html, body {
     min-height: 100vh;
     background-color: darkgray;
 }
 
+/* Organizando o cabeçalho do site */
 header {
     background-color: black;
     color: white;
     text-align: center;
 }
 
+/* Configurando a palavra principal do cabeçalho */
 header > h1 {
     padding-top: 50px;
     font-family: 'Montserrat', 'Bebas Neue', sans-serif;
@@ -33,25 +37,29 @@ header > h1 {
     font-variant: small-caps;
 }
 
+/* Dando espaço do subtítulo do site */
 header > p {
     padding-bottom: 50px;
 }
 
+/* Configurando todos os links */
 header a, footer a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Tirando o underline do link */
     font-weight: bolder;
 }
 
 header a:hover, footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Colocando underline após passar o mouse em cima do link */
 }
 
+/* Aplicando todas as configurações do poema */
 section {
     padding: 10vh 30px;
     line-height: 1.8;
 }
 
+/* Modificando a fonte */
 section p {
     padding-bottom: 2em;
     font-style: italic;
@@ -62,19 +70,20 @@ section.normal {
     color: black;
 }
 
-/* --- EFEITO PARALLAX CORRIGIDO PARA DESKTOP --- */
+/* Configuração das seções Parallax */
 section.imagem,
 section.imagem2 {
     background-color: rgb(51, 51, 51);
-    background-position: center center;
+    background-position: center center; /* Centralizado funciona melhor no GitHub */
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed; /* Efeito Parallax suave no PC */
+    background-attachment: fixed;
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.6);
     min-height: 70vh;
     color: white;
 }
 
+/* Caminhos das imagens com aspas */
 section.imagem  { background-image: url('../imagens/background001.jpg'); }
 section.imagem2 { background-image: url('../imagens/background002.jpg'); }
 
@@ -87,6 +96,7 @@ section.imagem2 > p {
     text-shadow: 1px 1px 0px black;
 }
 
+/* Modificando o rodapé do site para ficar mais profissional e responsivo */
 footer {
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -98,12 +108,10 @@ footer {
     padding: 10px;
 }
 
-/* --- TRATAMENTO PARA DISPOSITIVOS MÓVEIS --- */
-@media (max-width: 1024px), (pointer: coarse) {
+@media (max-width: 768px) {
     section.imagem,
     section.imagem2 {
-        background-attachment: scroll; /* Corrige o bug do iOS Safari */
-        background-position: center center;
+        background-position: 75% center;
         min-height: 50vh;
     }
 }
